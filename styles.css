@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+    background-image: url(./assets/young-rural-travellers-driving-through-country-side.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FBDAC6;
+}
+
+a:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    padding: 2rem 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar .toggle_btn{
+    color: #FBDAC6;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: #FBDAC6;
+    color: #283280;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale:  1.05;
+}
+
+.dropdown_menue{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 110px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: heigh .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menue.open {
+    height: 290px;
+}
+
+.dropdown_menue li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menue .action_btn{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+/*hero*/
+
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+#hero h1{
+    
+}
+
+/*Responsive design*/
+
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menue{
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown_menue{
+        left: 2rem;
+        width: unset;
+    }
+
+
+}
